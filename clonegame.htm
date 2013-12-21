@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="https://entless.org/js/jquery.js"></script>
+	<script type="text/javascript" src="clonegame.js"></script>
+	<link rel="stylesheet" type="text/css" href="clonegame.css"></link>
+	<title>Clone Game</title>
+</head>
+	<body onclick="javascript:$('.big-modal').fadeOut();">
+		<div class="info">
+			<p class="info-text">
+				<span>The Clone Game</span><br>
+				<a href="javascript:initGame();">Restart</a><br>
+				<a href="javascript:$('.big-modal').fadeIn();">Info</a>
+			</p>
+		</div>
+		<div class="big-modal">
+			<h1><strong>The Clone Game<strong></h1>
+			<p>
+				inspired by <a href="http://www.youtube.com/watch?v=lFQGSGsXbXE" title="the Source">Numberphile</a><br>
+				made by <a href="https://twitter.com/peterustinox" title="the Bozz">Niklas</a>
+			</p>
+			<br>
+			<p>
+				Get the prisoners out of the prison
+			</p>
+			<p style="font-size: 13px; color: silver; cursor: pointer;">
+				Click to dismiss
+			</p>
+		</div>
+		<div class="small-modal">This move is impossible</div>
+		<div id="game">
+		</div>
+	</body>
+</html>

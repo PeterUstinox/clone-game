@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font: 20px 'verdana', 'arial', 'helvetica', sans-serif;
+}
+
+a {
+	color: #9ee;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: #000;
+}
+
+#game {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#board {
+}
+
+.tile {
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+
+.row {
+	opacity: 0.98;
+}
+
+.clone {
+	border-radius: 50%;
+	background: #a02b34;
+}
+
+.clone:hover {
+	background: #902b34;
+	cursor: pointer;
+}
+
+.wall {
+	z-index: 1;
+	-webkit-box-shadow: 2px -2px 2px 1px rgba(255,255,255,1);
+	box-shadow: 2px -2px 2px 1px rgba(255,255,255,1);
+}
+
+.row:nth-of-type(even) .tile:nth-of-type(odd),
+.row:nth-of-type(odd) .tile:nth-of-type(even) {
+	background: #391e13;
+}
+
+.row:nth-of-type(even) .tile:nth-of-type(even),
+.row:nth-of-type(odd) .tile:nth-of-type(odd) {
+	background: #9d7434;
+}
+
+.extend-y,
+.extend-x {
+	position: fixed;
+	background: #aaa;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+	text-align: center;
+	width: 100%;
+	opacity: 0.5;
+	color: white;
+}
+
+.extend-y:hover, 
+.extend-x:hover {
+	cursor: pointer;
+	color: black;
+	opacity: 0.55;
+}
+
+.extend-y {
+	bottom: 50%;
+	-moz-transform: scale(1) rotate(90deg);
+	-webkit-transform: scale(1) rotate(90deg);
+	-o-transform: scale(1) rotate(90deg);
+	-ms-transform: scale(1) rotate(90deg);
+	transform: scale(1) rotate(90deg);
+}
+
+.extend-x {
+	top: 0;
+	left: 0;
+}
+
+.big-modal,
+.small-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: #555;
+	border-radius: 3px;
+	z-index: 2;
+	border-radius: 20px;
+	opacity: 0.9;
+	border: thin dotted black;
+	padding: 30px;
+	color: white;
+	text-align: center;
+}
+
+.big-modal {
+	margin-top: -75px;
+	margin-left: -200px;
+	width: 400px;
+	height: 150px;
+}
+
+.small-modal {
+	margin-top: -10px;
+	margin-left: -130px;
+	width: 260px;
+	height: 20px;
+	display: none;
+}
+
+.info {
+	position: fixed;
+	top: -150px;
+	right : -150px;
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	background: white;
+	z-index: 2;
+}
+
+.info-text {
+	position: fixed;
+	top: 20px;
+	right: 15px;
+	font-size: 16px;
+	z-index: 3;
+	text-align: right;
+}
+
+.info-text a {
+	color: #333;
+}
+
+.info-text span {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-weight: 900;
+	font-size: 13px;
+}
