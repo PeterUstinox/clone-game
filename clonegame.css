@@ -134,9 +134,9 @@ a:active {
 .info {
 	position: fixed;
 	top: -150px;
-	right : -150px;
+	right : -160px;
 	border-radius: 50%;
-	width: 300px;
+	width: 320px;
 	height: 300px;
 	background: white;
 	z-index: 2;
